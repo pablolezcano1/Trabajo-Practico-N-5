@@ -1,0 +1,68 @@
+<html lang="en">
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Calculadora Científica</title>
+    
+</head>
+
+<body>
+    <div id="CalculadoraCientifica"> 
+        <input type="text" id="display" readonly>
+        <div id="borde">
+            <div>
+                <input id="funcion" type="button" value="Sqrt" onclick="appendToDisplay('Math.sqrt(')">
+                <input id="funcion" type="button" value="Log" onclick="appendToDisplay('Math.log(')">
+                <input id="funcion" type="button" value="Sin" onclick="appendToDisplay('Math.sin(')">
+                <input id="funcion" type="button" value="Cos" onclick="appendToDisplay('Math.cos(')">
+                <input id="funcion" type="button" value="Tan" onclick="appendToDisplay('Math.tan(')">
+
+            </div>
+            <div>
+                <input id="funcion" type="button" value="X^Y" onclick="appendToDisplay('**')">
+                <input id="funcion" type="button" value="(" onclick="appendToDisplay('(')">
+                <input id="funcion" type="button" value=")" onclick="appendToDisplay(')')">
+                <input id="funcion" type="button" value="EXP" onclick="appendToDisplay('Math.exp(')">
+                <input id="funcion" type="button" value="n!" onclick="calculateFactorial()">
+
+            </div>
+            <div>
+                <input id="numeros" type="button" value="7" onclick="appendToDisplay('7')">
+                <input id="numeros" type="button" value="8" onclick="appendToDisplay('8')">
+                <input id="numeros"type="button" value="9" onclick="appendToDisplay('9')">
+                <input id="delete" type="button" value="CE" onclick="deleteLastCharacter()">
+                <input id="delete"type="button" value="C" onclick="clearDisplay()">
+            
+            </div>
+            <div>
+                <input id="numeros" type="button" value="4" onclick="appendToDisplay('4')">
+                <input id="numeros" type="button" value="5" onclick="appendToDisplay('5')">
+                <input id="numeros" type="button" value="6" onclick="appendToDisplay('6')">
+                <input id="funcion" type="button" value="*" onclick="appendToDisplay('*')">
+                <input id="funcion" type="button" value="/" onclick="appendToDisplay('/')">
+            </div>
+            <div>
+                <input id="numeros" type="button" value="1" onclick="appendToDisplay('1')">
+                <input id="numeros" type="button" value="2" onclick="appendToDisplay('2')">
+                <input id="numeros" type="button" value="3" onclick="appendToDisplay('3')">
+                <input id="funcion" type="button" value="+" onclick="appendToDisplay('+')">
+                <input id="funcion" type="button" value="-" onclick="appendToDisplay('-')">
+            </div>
+            <div>           
+                <input id="cero" type="button" value="0" onclick="appendToDisplay('0')">
+                <input id="funcion" type="button" value="." onclick="appendToDisplay('.')">
+                <input id="funcion" type="button" value="+/-" onclick="changeSign()">
+                <input id="funcion" type="button" value="PI" onclick="insertPi()">
+                <input id="igual" type="button" value="=" onclick="calculate()">
+            </div>  
+        </div>
+    </div>
+    
+    <script src="funciones.js "></script>
+
+</body>
+</html>
+
